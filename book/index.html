@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="en" class="light" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>Introduction - Symbiosky</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body class="sidebar-visible no-js">
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('light')
+            html.classList.add(theme);
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var body = document.querySelector('body');
+            var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction.html" class="active"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="website_links.html"><strong aria-hidden="true">2.</strong> Website Links</a></li><li class="chapter-item expanded affix "><li class="part-title">User Guide</li><li class="chapter-item expanded "><a href="user_guide/use_a_crypto_wallet.html"><strong aria-hidden="true">3.</strong> How to Use a Crypto Wallet</a></li><li class="chapter-item expanded "><a href="user_guide/testnet_tokens.html"><strong aria-hidden="true">4.</strong> Testnet Tokens Guide (For Symbiosky Testing)</a></li><li class="chapter-item expanded "><a href="user_guide/mainent_tokens.html"><strong aria-hidden="true">5.</strong> Tokens Needed to Use Symbiosky (Mainnet)</a></li><li class="chapter-item expanded "><a href="user_guide/proposal_conviction_lifecycle.html"><strong aria-hidden="true">6.</strong> Lifecycle</a></li><li class="chapter-item expanded "><a href="user_guide/how_to_create_a_proposal.html"><strong aria-hidden="true">7.</strong> How to Create a Proposal (Earn SYSKY Incentives)</a></li><li class="chapter-item expanded "><a href="user_guide/create_conviction.html"><strong aria-hidden="true">8.</strong> How to Create a Conviction</a></li><li class="chapter-item expanded "><a href="user_guide/vote_on_proposal.html"><strong aria-hidden="true">9.</strong> How to Vote on a Proposal</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Symbiosky</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="symbiosky"><a class="header" href="#symbiosky">Symbiosky</a></h1>
+<h2 id="monetizing-credibility-not-clicks"><a class="header" href="#monetizing-credibility-not-clicks">Monetizing Credibility, Not Clicks</a></h2>
+<h3 id="a-conviction-voting-platform-for-sustainable-knowledge-work"><a class="header" href="#a-conviction-voting-platform-for-sustainable-knowledge-work">A Conviction Voting Platform for Sustainable Knowledge Work</a></h3>
+<p>Symbiosky addresses a fundamental misalignment in how digital platforms compensate knowledge workers. While ad-driven social media rewards viral content and engagement metrics, researchers, journalists, and educators struggle to monetize credible, high-quality work that serves long-term public good.</p>
+<p>Built on Bluesky's AT Protocol with over 40 million users, Symbiosky introduces a credibility-first marketplace that uses conviction voting to route funding toward trustworthy contributors. By requiring voters to lock tokens proportional to their confidence level, the system naturally filters short-term manipulation while amplifying sustained, truthful conviction.</p>
+<p>Key innovations include:</p>
+<ul>
+<li><em>Conviction voting mechanism</em> that rewards long-term commitment over speculative behavior</li>
+<li><em>Merit-based rewards</em> distributed monthly based on community scoring (1-10 scale)</li>
+<li><em>Decay-resistant reputation</em> that protects active participants while discouraging inactive token hoarding</li>
+<li><em>Threshold-based funding</em> ensuring only well-supported proposals receive rewards</li>
+<li><em>Open protocol integration</em> leveraging Bluesky's decentralized infrastructure</li>
+</ul>
+<h2 id="problem-statement"><a class="header" href="#problem-statement">Problem Statement</a></h2>
+<h4 id="the-attention-economys-broken-incentives"><a class="header" href="#the-attention-economys-broken-incentives">The Attention Economy's Broken Incentives</a></h4>
+<p>Modern social platforms optimize for engagement metrics that maximize advertising revenue. This creates perverse incentives where:</p>
+<ul>
+<li>Viral misinformation spreads faster than careful fact-checking</li>
+<li>Clickbait headlines outcompete nuanced analysis</li>
+<li>Researchers and educators lack sustainable funding mechanisms</li>
+<li>Quality journalism struggles to compete with sensationalism</li>
+<li>Long-term value creation is undercompensated</li>
+</ul>
+<p>The root cause is simple: platforms monetize attention, not credibility. A researcher publishing peer-reviewed findings receives no more financial support than a conspiracy theorist generating viral rage clicks.</p>
+<h4 id="the-credibility-gap"><a class="header" href="#the-credibility-gap">The Credibility Gap</a></h4>
+<p>Knowledge workers face a credibility-monetization gap. While their work may have high epistemic value and long-term social impact, current platforms offer no mechanism to capture this value. Traditional solutions like paywalls, subscriptions, and grants each have limitations:</p>
+<ul>
+<li><em>Paywalls</em> restrict access and reduce impact</li>
+<li><em>Subscriptions</em> require constant content production</li>
+<li><em>Grants</em> involve lengthy applications and institutional gatekeeping</li>
+<li><em>Donations</em> are unpredictable and favor emotional appeals</li>
+</ul>
+<p>What's needed is a system that allows communities to directly fund credible work based on sustained conviction rather than momentary attention.</p>
+<h2 id="solution-the-symbiosky-platform"><a class="header" href="#solution-the-symbiosky-platform">Solution: The Symbiosky Platform</a></h2>
+<h4 id="overview"><a class="header" href="#overview">Overview</a></h4>
+<p>Symbiosky is a credibility marketplace built on three core principles:</p>
+<ul>
+<li><em>Conviction over clicks:</em> Voting power scales with token lock duration</li>
+<li><em>Merit over virality:</em> Rewards based on quality scores, not engagement</li>
+<li><em>Community over algorithms:</em> Decentralized governance via token holders</li>
+</ul>
+<p>The platform enables any user to submit proposals (content, research, journalism, educational materials) and receive monthly funding based on how the community scores their credibility and value.</p>
+<h2 id="the-bluesky-advantage"><a class="header" href="#the-bluesky-advantage">The Bluesky Advantage</a></h2>
+<p>Symbiosky leverages Bluesky's AT Protocol, which provides:</p>
+<ul>
+<li><em>40+ million user base</em> for immediate network effects</li>
+<li><em>Decentralized architecture</em> ensuring platform resilience</li>
+<li><em>Composable feeds</em> allowing algorithmic choice</li>
+<li><em>Open protocol</em> enabling third-party integrations</li>
+<li><em>Credible exit</em> preventing platform lock-in</li>
+</ul>
+<p>This infrastructure allows Symbiosky to focus on governance and incentive design rather than reinventing social networking.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+                            <a rel="next prefetch" href="website_links.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+                    <a rel="next prefetch" href="website_links.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
