@@ -11,3 +11,7 @@
 - [How to Create a Proposal (Earn SYSKY Incentives)](./user_guide/how_to_create_a_proposal.md)
 - [How to Create a Conviction](./user_guide/create_conviction.md)
 - [How to Vote on a Proposal](./user_guide/vote_on_proposal.md)
+
+# Articles
+
+- [Trust doesn’t scale. Coordination does](./articles/coordination.md)
