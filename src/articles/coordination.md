@@ -68,6 +68,12 @@ Symbiosky is built on this fundamental insight: the future of knowledge work is 
 
 In today’s attention economy, platforms monetize engagement rather than truth. Viral content spreads not because it is credible, but because it captures attention. As a result, independent researchers, journalists, educators, civil societies, advocacy groups struggle to sustain themselves financially, even when their work provides long-term public value. This is not a failure of individuals — it is a failure of coordination. Society lacks mechanisms to collectively fund credibility at scale.
 
+Symbiosky addresses this coordination gap. By requiring participants to lock tokens proportional to their conviction, the platform creates incentives for long-term commitment rather than short-term manipulation. Participants do not need to trust each voter’s intentions; the system itself filters behavior through economic incentives. Short-term speculators cannot sustain influence because they are unwilling to bear the cost of long-term commitment. Over time, consistent, truthful participants naturally accumulate influence.
+
+This is why protocols matter. Protocols transform social problems into coordination problems that can be solved systematically. They replace promises with rules, personalities with processes, and centralized control with decentralized participation. Symbiosky applies this principle to one of the most critical challenges of the digital age: funding credible knowledge.
+
 At its core, Symbiosky is not just a platform — it is coordination infrastructure for the credibility economy. It enables communities to collectively decide what deserves support, without relying on centralized gatekeepers or fragile social trust. In a world where information is abundant but credibility is scarce, the ability to coordinate at scale will determine which ideas survive and which fade.
+
+> The future of knowledge is not about who we trust. It is about how well we coordinate.
 
 Decentralization · Algorithms · Coordination
