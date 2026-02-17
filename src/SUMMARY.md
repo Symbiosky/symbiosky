@@ -12,6 +12,9 @@
 - [How to Create a Conviction](./user_guide/create_conviction.md)
 - [How to Vote on a Proposal](./user_guide/vote_on_proposal.md)
 
+# Future Improvements
+- [The Case for Randomized Jury Selection in Symbiosky](./articles/symbiosky-randomization-benefits.md)
+
 # Articles
 
 - [Trust doesn’t scale. Coordination does](./articles/coordination.md)
