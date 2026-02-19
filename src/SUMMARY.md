@@ -20,3 +20,4 @@
 
 - [Trust doesn’t scale. Coordination does](./articles/coordination.md)
 - [How College Students Can Turn Learning into Credibility — and Income](./articles/social_media_for_college_students.md)
+- [Velocity Of Money](./articles/velocity_of_money.md)
