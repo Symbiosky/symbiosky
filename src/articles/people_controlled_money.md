@@ -1,5 +1,7 @@
 # Money Is the Engine — Without Public Control, the Whole Machine Fails
 
+Date: 20-02-2026
+
 Money is not just a tool. It is the engine of modern civilization. Every institution — governments, corporations, media, education, healthcare, and even environmental protection — ultimately runs on the flow of money.
 
 If the public does not control this engine, the entire machine begins to fail.

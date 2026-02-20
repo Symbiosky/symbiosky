@@ -1,5 +1,8 @@
 # Velocity Of Money
 
+Date: 19-02-2026 
+
+
 Velocity of money = how fast money moves in an economy.
 
 When money is used for **useful work** (research, education, journalism, building tools), it doesn’t just sit — it circulates, creates jobs, knowledge, and new opportunities.
