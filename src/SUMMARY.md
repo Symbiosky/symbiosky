@@ -21,3 +21,4 @@
 - [Trust doesn’t scale. Coordination does](./articles/coordination.md)
 - [How College Students Can Turn Learning into Credibility — and Income](./articles/social_media_for_college_students.md)
 - [Velocity Of Money](./articles/velocity_of_money.md)
+- [Money Is the Engine — Without Public Control, the Whole Machine Fails](./articles/people_controlled_money.md)
